@@ -1,0 +1,61 @@
+{
+  "name": "population-manager",
+  "version": "1.0.0",
+  "description": "An API for population management",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js",
+    "test": "NODE_ENV=test jest --forceExit --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "population-manager"
+  },
+  "jest": {
+    "testMatch": [
+      "**/*.spec.js?(x)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!node_modules/",
+      "!src/index.js",
+      "!src/app.js"
+    ],
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "keywords": [],
+  "author": "Allan Imire",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "jest": "^24.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.5",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.5",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "swagger-ui-express": "^4.0.7",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "prettier": "^1.18.2"
+  }
+}
