@@ -4,9 +4,13 @@ import databaseConnection from "./app/utils/databaseConnection";
 
 dotenv.config();
 
-databaseConnection(process.env.MONGODB_URI);
+// databaseConnection(process.env.MONGODB_URI);
+databaseConnection(
+  "mongodb+srv://allan:m0zillafirefox@population-mgt-luioo.mongodb.net/population?retryWrites=true&w=majority"
+);
 
 // listen for requests
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server is listening on port 3000");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });

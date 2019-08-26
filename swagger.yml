@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  title: SMS Server
+  title: Population Management
   description: >-
     This is the official API for for a population census management app. It assumes authentication has already been done by the application using it and focusses on the location and the numbers. Locations are saved using the area code to increase accuracy
   version: 1.0.0
@@ -107,12 +107,12 @@ paths:
       produces:
         - application/json
       parameters:
-      - in: path
-        name: location
-        description: Area code of the location
-        required: true
-        schema:
-          type: number
+        - in: path
+          name: location
+          description: Area code of the location
+          required: true
+          schema:
+            type: number
       responses:
         '200':
           description: OK
@@ -127,12 +127,12 @@ paths:
       produces:
         - application/json
       parameters:
-      - in: path
-        name: location
-        description: Area code of the location
-        required: true
-        schema:
-          type: number
+        - in: path
+          name: location
+          description: Area code of the location
+          required: true
+          schema:
+            type: number
       responses:
         '200':
           description: OK
@@ -142,4 +142,4 @@ paths:
 
 externalDocs:
   description: Source code
-  url: 'https://github.com/PAbishai/sms_server'
+  url: 'https://github.com/imireallan/population-management'
